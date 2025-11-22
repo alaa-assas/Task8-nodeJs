@@ -3,7 +3,7 @@ Project Structure
 
 
 ## Project Structure
-
+```bash
 task-management-system/
 ├── src/
 │   ├── controllers/          
@@ -39,7 +39,7 @@ task-management-system/
 ├── .gitignore
 ├── package.json
 └── README.md
- 
+ ```
  
  ## Required Libraries
 
