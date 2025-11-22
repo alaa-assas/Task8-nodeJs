@@ -89,6 +89,7 @@ task-management-system/
 ## Database Models (Mongoose Schemas)
 
 ### User Model
+```javascript
 {
   name: {
     type: String,
@@ -122,10 +123,11 @@ task-management-system/
     default: Date.now
   }
 }
-
+```
 ---
 
 ### Project Model
+```javascript
 {
   name: {
     type: String,
@@ -168,7 +170,7 @@ task-management-system/
     default: Date.now
   }
 }
-
+```
 **Relationships**:  
 - `owner`: References a single **User** (the creator)  
 - `members`: Array of references to **User** documents, representing collaborators
@@ -176,6 +178,7 @@ task-management-system/
 ---
 
 ### Task Model
+```javascript
 {
   title: {
     type: String,
@@ -238,7 +241,7 @@ task-management-system/
     default: Date.now
   }
 }
-
+```
 **Relationships**:  
 - `project`: References a single **Project**  
 - `assignedTo`: Optional reference to a **User** (the assignee)  
@@ -247,6 +250,7 @@ task-management-system/
 ---
 
 ### Notification Model
+```javascript
 {
   user: {
     type: mongoose.Schema.ObjectId,
@@ -285,7 +289,7 @@ task-management-system/
     default: Date.now
   }
 }
-
+```
 **Relationships**:  
 - `user`: References the **User** who receives the notification  
 - `relatedTask` (optional): Links to a specific **Task**  
